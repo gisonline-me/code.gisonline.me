@@ -319,7 +319,7 @@ $("document").ready(function() {
     // Together Button
     $("#btnTogether").click(function(event) {
       event.preventDefault();
-
+      debugger
       TogetherJS(this);
       return false;
     });
