@@ -1,6 +1,6 @@
 $("document").ready(function() {
     var libs = {};
-    
+
     // List of Frameworks & Extensions
     var frameworks = {
         // jQuery
@@ -57,7 +57,7 @@ $("document").ready(function() {
         // Zepto
         "Zepto 1.0rc1": "http://cdnjs.cloudflare.com/ajax/libs/zepto/1.0rc1/zepto.min.js",
         // Enyo
-        
+
         // Shipyard
         "Shipyard (nightly)": "http://static.seanmonstar.com/shipyard/shipyard-nightly.js",
         "Shipyard 0.2": "http://static.seanmonstar.com/shipyard/shipyard-all-v0.2.0.js",
@@ -92,7 +92,7 @@ $("document").ready(function() {
         "qooxdoo 2.0.3": "http://cdnjs.cloudflare.com/ajax/libs/qooxdoo/2.0.3/q.min.js",
         // D3
         "D3 3.0.4": "http://d3js.org/d3.v3.min.js",
-        // CreateJS 
+        // CreateJS
         "CreateJS 2013.09.25": "http://code.createjs.com/createjs-2013.09.25.combined.js",
         // WebApp Install
         "WebApp Install 0.1": "http://fiddle.jshell.net/js/lib/webapp_install.js",
@@ -123,14 +123,14 @@ $("document").ready(function() {
         "Vue (edge)": "http://vuejs.org/js/vue.js",
         "Vue 0.11.0": "http://cdnjs.cloudflare.com/ajax/libs/vue/0.11.0/vue.min.js"
     };
-    
+
     var frameworks_css = {
         "jQuery UI 1.10.3": "http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.3/css/base/jquery-ui.css",
         "Bootstrap 3.2.0": "http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css",
         "Bootstrap 2.3.2": "http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css",
         "jQuery UI 1.9.2": "http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css"
     };
-    
+
     var frameworks_extras = {
         "jQuery Compat (edge)": {
             "QUnit 1.12.0": "http://code.jquery.com/qunit/qunit-1.12.0.js",
@@ -146,7 +146,7 @@ $("document").ready(function() {
             "jQuery Lint": "http://fiddle.jshell.net/js/lib/jquery.lint.js"
         },
         "jQuery 2.1.0": {
-            "Bootstrap 3.2.0": "http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js", 
+            "Bootstrap 3.2.0": "http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js",
             "Bootstrap 2.3.2": "http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"
         },
         "jQuery 2.0.2": {
@@ -163,7 +163,7 @@ $("document").ready(function() {
         "jQuery 1.7.2": {
             "jQuery UI 1.8.18": "http://code.jquery.com/ui/1.8.18/jquery-ui.min.js",
             "jQuery Lint (13 June '11)": "http://fiddle.jshell.net/js/lib/jquery.lint-11-06.js",
-            "Bootstrap 2.0.2 (js only)": "http://fiddle.jshell.net/js/lib/bootstrap-2.0.2.js",  
+            "Bootstrap 2.0.2 (js only)": "http://fiddle.jshell.net/js/lib/bootstrap-2.0.2.js",
         },
         "Prototype 1.7.1": {
             "script.aculo.us 1.9": "http://fiddle.jshell.net/js/lib/scriptaculous-js-1.9.0/src/scriptaculous.js",
@@ -174,12 +174,12 @@ $("document").ready(function() {
             "Scripty2 2.0.0-a5": "http://fiddle.jshell.net/js/lib/s2.js"
         },
         "ExtJS 3.4.0": {
-            "Ext All Debug": "http://cdn.sencha.io/ext-3.4.0/ext-all-debug.js"  
+            "Ext All Debug": "http://cdn.sencha.io/ext-3.4.0/ext-all-debug.js"
         },
         "Underscore 1.4.4": {
             "Backbone LocalStorage": "http://cdnjs.cloudflare.com/ajax/libs/backbone-localstorage.js/1.0/backbone.localStorage-min.js",
             "Backbone ModelBinder": "http://cdnjs.cloudflare.com/ajax/libs/backbone.modelbinder/0.1.3/Backbone.ModelBinder-min.js",
-            "Backbone 1.0": "http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone.js"  
+            "Backbone 1.0": "http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone.js"
         },
         "Undersocre 1.4.3": {
             "Backbone 0.9.10": "http://cdnjs.cloudflare.com/ajax/libs/backbone.js/0.9.10/backbone-min.js",
@@ -192,155 +192,128 @@ $("document").ready(function() {
             "Backbone ModelBinder": "http://cdnjs.cloudflare.com/ajax/libs/backbone.modelbinder/0.1.3/Backbone.ModelBinder-min.js"
         },
         "React 0.8.0": {
-            "JSXTransformer.js 0.8.0": "http://cdnjs.cloudflare.com/ajax/libs/react/0.8.0/JSXTransformer.js"  
+            "JSXTransformer.js 0.8.0": "http://cdnjs.cloudflare.com/ajax/libs/react/0.8.0/JSXTransformer.js"
         },
         "React 0.4.0": {
-            "JSXTransformer.js 0.4.0": "http://fb.me/JSXTransformer-0.4.0.js"  
+            "JSXTransformer.js 0.4.0": "http://fb.me/JSXTransformer-0.4.0.js"
         },
         "React 0.3.2": {
-            "JSXTransformer.js 0.3.2": "http://dragon.ak.fbcdn.net/hphotos-ak-prn1/851582_580035725361422_42012_n.js"  
+            "JSXTransformer.js 0.3.2": "http://dragon.ak.fbcdn.net/hphotos-ak-prn1/851582_580035725361422_42012_n.js"
         },
         "Brick edge": {
-            "Brick CSS": "http://mozbrick.github.io/dist/brick.css"  
+            "Brick CSS": "http://mozbrick.github.io/dist/brick.css"
         }
     };
-    
+
     // Frameworks & Extensions Dropdown
-    $("#dropdownMenu1 li a").click(function(event){
-        event.preventDefault();
-        
-        $(".extra").remove();
-        
-        var dropdown = $(this).parents('.btn-group');
-        
-        var selText = $(this).text();
-        dropdown.find('.dropdown-toggle').html(selText + ' <span class="caret"></span>');
-        
-        var lib_extras = frameworks_extras[selText];
-        
-        for (extra in lib_extras)
-            dropdown.append("<div class='extra checkbox'><label><input type='checkbox'></input><span class='chk_lbl'>" + extra + "</span></label></div>");
-    });
-    
+    // $("#dropdownMenu1 li a").click(function(event){
+    //     event.preventDefault();
+    //
+    //     $(".extra").remove();
+    //
+    //     var dropdown = $(this).parents('.btn-group');
+    //
+    //     var selText = $(this).text();
+    //     dropdown.find('.dropdown-toggle').html(selText + ' <span class="caret"></span>');
+    //
+    //     var lib_extras = frameworks_extras[selText];
+    //
+    //     for (extra in lib_extras)
+    //         dropdown.append("<div class='extra checkbox'><label><input type='checkbox'></input><span class='chk_lbl'>" + extra + "</span></label></div>");
+    // });
+
     // Script Injection Dropdown
-    $("#dropdownMenu2 li a").click(function(event){
-        event.preventDefault();
-        
-        var dropdown = $(this).parents('.btn-group');
-        
-        var selText = $(this).text();
-        dropdown.find('.dropdown-toggle').html(selText + ' <span class="caret"></span>');
-    });
-    
+    // $("#dropdownMenu2 li a").click(function(event){
+    //     event.preventDefault();
+    //
+    //     var dropdown = $(this).parents('.btn-group');
+    //
+    //     var selText = $(this).text();
+    //     dropdown.find('.dropdown-toggle').html(selText + ' <span class="caret"></span>');
+    // });
+
     // Doctype Dropdown
-    $("#dropdownMenu3 li a").click(function(event){
-        event.preventDefault();
-        
-        var dropdown = $(this).parents('.btn-group');
-        
-        var selText = $(this).text();
-        dropdown.find('.dropdown-toggle').html(selText + ' <span class="caret"></span>');
-    });
-    
+    // $("#dropdownMenu3 li a").click(function(event){
+    //     event.preventDefault();
+    //
+    //     var dropdown = $(this).parents('.btn-group');
+    //
+    //     var selText = $(this).text();
+    //     dropdown.find('.dropdown-toggle').html(selText + ' <span class="caret"></span>');
+    // });
+
     // HTML Dropdown
-    $("#dropdownMenu4 li a").click(function(event){
-        event.preventDefault();
-        
-        var dropdown = $(this).parents('.btn-group');
-        
-        var selText = $(this).text();
-        dropdown.find('.dropdown-toggle').html(selText + ' <span class="caret"></span>');
-    });
-    
+    // $("#dropdownMenu4 li a").click(function(event){
+    //     event.preventDefault();
+    //
+    //     var dropdown = $(this).parents('.btn-group');
+    //
+    //     var selText = $(this).text();
+    //     dropdown.find('.dropdown-toggle').html(selText + ' <span class="caret"></span>');
+    // });
+
     // CSS Dropdown
-    $("#dropdownMenu5 li a").click(function(event){
-        event.preventDefault();
-        
-        var dropdown = $(this).parents('.btn-group');
-        
-        var selText = $(this).text();
-        dropdown.find('.dropdown-toggle').html(selText + ' <span class="caret"></span>');
-    });
-    
+    // $("#dropdownMenu5 li a").click(function(event){
+    //     event.preventDefault();
+    //
+    //     var dropdown = $(this).parents('.btn-group');
+    //
+    //     var selText = $(this).text();
+    //     dropdown.find('.dropdown-toggle').html(selText + ' <span class="caret"></span>');
+    // });
+
     // Javascript Dropdown
-    $("#dropdownMenu6 li a").click(function(event){
-        event.preventDefault();
-        
-        var dropdown = $(this).parents('.btn-group');
-        
-        var selText = $(this).text();
-        dropdown.find('.dropdown-toggle').html(selText + ' <span class="caret"></span>');
+    // $("#dropdownMenu6 li a").click(function(event){
+    //     event.preventDefault();
+    //
+    //     var dropdown = $(this).parents('.btn-group');
+    //
+    //     var selText = $(this).text();
+    //     dropdown.find('.dropdown-toggle').html(selText + ' <span class="caret"></span>');
+    // });
+
+
+    $.ajax({
+      url : "samples/vectorTiles.html",
+      success : function(result){
+          var initCode = ace.edit("html-editor").getSession();
+          event.preventDefault();
+          initCode.setValue(result);
+          $("#btnRun").click();
+      }
     });
-    
     // RUN Button
-    $("#btnRun").click(function(event) {  
+    $("#btnRun").click(function(event) {
         event.preventDefault();
-        
+        $('#ifamePreview').empty();
+        $('#ifamePreview').html("<iframe class='previewEditor' id='preview' name='result' sandbox='allow-forms allow-popups allow-scripts allow-same-origin' frameborder='0'>#document</iframe>")
         var previewDoc = window.frames[0].document;
-        
-        var css    = ace.edit("css-editor").getSession().getValue();
-        var script = ace.edit("js-editor").getSession().getValue();
         var html   = ace.edit("html-editor").getSession().getValue();
-        
-        var dropdownMenu1Sel = $("#dropdownMenu1").parents('.btn-group').find('.dropdown-toggle').text().trim();
-        var lib = frameworks[dropdownMenu1Sel];
-        var extra_libs = []
-        $("#dropdownMenu1").parents('.btn-group').find('input:checked').parent().each( 
-            function(){ extra_libs.push($(this).text().trim());}
-        );
-        var dropdownMenu2Sel = $("#dropdownMenu2").parents('.btn-group').find('.dropdown-toggle').text().trim();
-        
-        previewDoc.write("<!DOCTYPE html>");
-        previewDoc.write("<html>");
-        previewDoc.write("<head>");
-        previewDoc.write("<style type='text/css'>" + css + "</style>");
-        if (lib)
-            previewDoc.write("<script src=" + lib + " type='text/javascript'></script>");
-        for (var i in extra_libs)
-        {
-            if (extra_libs[i] in frameworks_css)
-                previewDoc.write("<style type='text/css' src=" + frameworks_css[extra_libs[i]] + "></style>");
-            
-            if (lib in frameworks_extras)
-                previewDoc.write("<script src=" + frameworks_extras[lib][extra_libs[i]] + " type='text/javascript'></script>");
-        }
-        if (dropdownMenu2Sel == "onLoad")
-            previewDoc.write("<script type='text/javascript'>window.onload = function() {" + script + "}</script>");
-        //else if (dropdownMenu2Sel == "onDomready")
-        //    
-        else if (dropdownMenu2Sel == "No wrap - in head")
-            previewDoc.write("<script type='text/javascript'>" + script + "</script>");
-        previewDoc.write("</head>");
-        previewDoc.write("<body>");
-        previewDoc.write(html);
-        if (dropdownMenu2Sel == "No wrap - in body")
-            previewDoc.write("<script type='text/javascript'>" + script + "</script>");
-        previewDoc.write("</body>");
-        previewDoc.write("</html>");
+        var html2 = style_html(html);
+        previewDoc.write(html2);
         previewDoc.close();
     });
-    
+
     // Preview code on page load
-    $("#btnRun").click();
-    
+    // $("#btnRun").click();
+
     // TIDYUP Button
     $("#btnTidyUp").click(function(event) {
         event.preventDefault();
-        
+
         var html = ace.edit("html-editor").getSession().getValue();
         var html2 = style_html(html);
-        
         ace.edit("html-editor").getSession().setValue(html2);
-        
-        var css = ace.edit("css-editor").getSession().getValue();
-        var css2 = css_beautify(css);
-        
-        ace.edit("css-editor").getSession().setValue(css2);
-        
-        var js = ace.edit("js-editor").getSession().getValue();
-        var js2 = js_beautify(js);
-        
-        ace.edit("js-editor").getSession().setValue(js2);
+
+        // var css = ace.edit("css-editor").getSession().getValue();
+        // var css2 = css_beautify(css);
+        //
+        // ace.edit("css-editor").getSession().setValue(css2);
+        //
+        // var js = ace.edit("js-editor").getSession().getValue();
+        // var js2 = js_beautify(js);
+        //
+        // ace.edit("js-editor").getSession().setValue(js2);
     });
 
     // Together Button
