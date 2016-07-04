@@ -20,13 +20,24 @@
     <!-- JSTinker Scripts -->
     <script src="js/jstinker.js"></script>
     <!-- Bootstrap Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="js/vendors/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <!-- Bootstrap Optional theme -->
-    <link rel="stylesheet" href="js/vendors/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
     <!-- JSTinker Style -->
     <link rel="stylesheet" href="css/jstinker.css" type="text/css">
     <!-- Bootstrap Latest compiled and minified JavaScript -->
-    <script src="js/vendors/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
+
+<!-- (Optional) Latest compiled and minified JavaScript translation files -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/i18n/defaults-*.min.js"></script>
+
 </head>
 <body>
     <nav class="navbar navbar-default">
@@ -44,6 +55,15 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="toolbar">
             <ul class="nav navbar-nav">
+                <li style="margin-top:10px">
+
+                  <select id="sample-selector" class="selectpicker">
+                    <option value="sample1.html">Basic ArcGIS Javascript 4.0 Map</option>
+                    <option value="vectorTiles.html">Vector Tiles</option>
+                    <option value="layers-portal.html">Layers with Portal</option>
+                  </select>
+
+                </li>
                 <li id="btnRun"><a href=""><span class="glyphicon glyphicon-play" aria-hidden="true"></span> Run</a></li>
                 <li id="btnTidyUp"><a href=""><span class="glyphicon glyphicon-flash" aria-hidden="true"></span> TidyUp</a></li>
                 <li id="btnTogether"><a href=""><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span> Collaborate</button></li>
@@ -501,6 +521,11 @@
         htmlEditor.setOptions({
             enableBasicAutocompletion: true
         });
+        var w_search = window.location.search;
+        var sample = "sample1.html";
+        if (w_search !=""){
+          sample = w_search.split("?")[1].split("=")[1]
+        }
 
         // var cssEditor = ace.edit("css-editor");
         // cssEditor.setTheme("ace/theme/crimson-editor");

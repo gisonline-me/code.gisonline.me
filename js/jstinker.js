@@ -272,15 +272,30 @@ $("document").ready(function() {
     //     dropdown.find('.dropdown-toggle').html(selText + ' <span class="caret"></span>');
     // });
 
+    // debugger
 
     $.ajax({
-      url : "samples/vectorTiles.html",
+      url : "samples/"+sample,
       success : function(result){
           var initCode = ace.edit("html-editor").getSession();
           event.preventDefault();
           initCode.setValue(result);
           $("#btnRun").click();
       }
+    });
+
+    $("#sample-selector").change(function(event){
+      // debugger
+      // window.location.search = "sample="+this.value
+      $.ajax({
+        url : "samples/"+this.value,
+        success : function(result){
+            var initCode = ace.edit("html-editor").getSession();
+            event.preventDefault();
+            initCode.setValue(result);
+            $("#btnRun").click();
+        }
+      });
     });
     // RUN Button
     $("#btnRun").click(function(event) {
@@ -319,7 +334,6 @@ $("document").ready(function() {
     // Together Button
     $("#btnTogether").click(function(event) {
       event.preventDefault();
-      debugger
       TogetherJS(this);
       return false;
     });
