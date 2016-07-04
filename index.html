@@ -58,8 +58,8 @@
                 <li style="margin-top:10px">
 
                   <select id="sample-selector" class="selectpicker">
-                    <option value="sample1.html">Basic ArcGIS Javascript 4.0 Map</option>
                     <option value="vectorTiles.html">Vector Tiles</option>
+                    <option value="sample1.html">Basic ArcGIS Javascript 4.0 Map</option>
                     <option value="layers-portal.html">Layers with Portal</option>
                   </select>
 
@@ -522,7 +522,7 @@
             enableBasicAutocompletion: true
         });
         var w_search = window.location.search;
-        var sample = "sample1.html";
+        var sample = "vectorTiles.html";
         if (w_search !=""){
           sample = w_search.split("?")[1].split("=")[1]
         }
