@@ -287,6 +287,7 @@ $("document").ready(function() {
     $("#sample-selector").change(function(event){
       // debugger
       // window.location.search = "sample="+this.value
+      // window.location.hash = this.value
       $.ajax({
         url : "samples/"+this.value,
         success : function(result){
@@ -332,9 +333,9 @@ $("document").ready(function() {
     });
 
     // Together Button
-    $("#btnTogether").click(function(event) {
-      event.preventDefault();
-      TogetherJS(this);
-      return false;
-    });
+    // $("#btnTogether").click(function(event) {
+    //   event.preventDefault();
+    //   TogetherJS(this);
+    //   return false;
+    // });
 });

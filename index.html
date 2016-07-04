@@ -61,12 +61,16 @@
                     <option value="vectorTiles.html">Vector Tiles</option>
                     <option value="sample1.html">Basic ArcGIS Javascript 4.0 Map</option>
                     <option value="layers-portal.html">Layers with Portal</option>
+                    <option value="legend.html">Ledgend Widget</option>
+                    <option value="custom-logo.html">Custom Logo</option>
+                    <option value="search-3d.html">Search 3D</option>
+                    <option value="calcite-map.html">Create a Calcite Maps Bootstrap application</option>
                   </select>
 
                 </li>
                 <li id="btnRun"><a href=""><span class="glyphicon glyphicon-play" aria-hidden="true"></span> Run</a></li>
                 <li id="btnTidyUp"><a href=""><span class="glyphicon glyphicon-flash" aria-hidden="true"></span> TidyUp</a></li>
-                <li id="btnTogether"><a href=""><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span> Collaborate</button></li>
+                <!-- <li id="btnTogether"><a href=""><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span> Collaborate</button></li> -->
             </ul>
         </div><!-- /.navbar-collapse -->
     </nav>
@@ -521,11 +525,12 @@
         htmlEditor.setOptions({
             enableBasicAutocompletion: true
         });
-        var w_search = window.location.search;
+        // var w_search = window.location.hash;
         var sample = "vectorTiles.html";
-        if (w_search !=""){
-          sample = w_search.split("?")[1].split("=")[1]
-        }
+        // if (w_search !=""){
+        //   sample = window.location.hash.split("#")[1]
+        // }
+        // window.location.hash = sample;
 
         // var cssEditor = ace.edit("css-editor");
         // cssEditor.setTheme("ace/theme/crimson-editor");
