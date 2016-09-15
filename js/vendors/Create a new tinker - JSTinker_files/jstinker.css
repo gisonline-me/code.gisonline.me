@@ -354,23 +354,3 @@ input, textarea {
 .langright {
     margin-left: 10px;
 }
-
-
-#anonymousPanel{
-  float:right;
-}
-
-#loggedInPanel{
-  float:right;
-  /*margin-top:5px;*/
-  display:none;
-}
-.esri_image{
-  margin-top: -5px;
-}
-.bootstrap-tagsinput .tag{
-  font-size: 100% !important;
-}
-.label-info{
-  background: #45b788;
-}

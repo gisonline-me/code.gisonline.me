@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!-- saved from url=(0025)http://code.gisonline.me/ -->
+<html class="dj_webkit dj_chrome dj_contentbox"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Vector tiles - 4.0</title>
+    <style>
+        html,
+        body,
+        #viewDiv {
+          padding: 0;
+          margin: 0;
+          height: 100%;
+          width: 100%;
+        }
+    </style>
+
+    <link rel="stylesheet" href="./main.css">
+    <script type="text/javascript" charset="utf-8" src="./dojo_en-us.js"></script><script type="text/javascript" charset="utf-8" src="./MapView.js"></script><script type="text/javascript" charset="utf-8" src="./VectorTileLayer.js"></script><script type="text/javascript" charset="utf-8" src="./VectorTileLayerLoader.js"></script><script type="text/javascript" charset="utf-8" src="./VectorTileTokenHandler.js"></script><script type="text/javascript" charset="utf-8" src="./vector-tile.js"></script><script type="text/javascript" charset="utf-8" src="./VectorTileLayerView2D.js"></script><script src="./saved_resource"></script>
+
+    <script>
+        require([
+          "esri/Map",
+          "esri/views/MapView",
+          "esri/layers/VectorTileLayer",
+          "dojo/domReady!"
+        ], function(Map, MapView, VectorTileLayer) {
+    
+          // Create a Map
+          var map = new Map();
+    
+          // Make map view and bind it to the map
+          var view = new MapView({
+            container: "viewDiv",
+            map: map,
+            center: [-77.036871, 38.907192],
+             zoom: 12
+          });
+    
+          /********************************************************************
+           * Add a tile layer to the map
+           *
+           * The url property must either point to the style as
+           * demonstrated below or to the URL of a Vector Tile service
+           * such as:
+           * https://basemaps.arcgis.com/b2/arcgis/rest/services/World_Basemap/VectorTileServer
+           *********************************************************************/
+          var tileLyr = new VectorTileLayer({
+            url: "https://www.arcgis.com/sharing/rest/content/items/bf79e422e9454565ae0cbe9553cf6471/resources/styles/root.json"
+          });
+          map.add(tileLyr);
+        });
+    </script>
+</head>
+
+<body>
+    <div id="viewDiv" class="esri-view esri-view-width-small esri-view-width-greater-than-xsmall esri-view-width-less-than-medium esri-view-width-less-than-large esri-view-width-less-than-xlarge esri-view-height-small esri-view-height-greater-than-xsmall esri-view-height-less-than-medium esri-view-height-less-than-large esri-view-height-less-than-xlarge esri-view-orientation-portrait"><div class="esri-view-root" style="width: 697px; height: 708px;"><div class="esri-view-surface" style="touch-action: none; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); width: 697px; height: 708px;"><div class="esri-display-object" style="transform-origin: 348.5px 354px 0px; transform: rotateZ(0deg);"><div class="esri-display-object" style="display: block;"><div class="esri-display-object"><canvas class="" tabindex="0" width="1394" height="1416" style="position: absolute; transform-origin: center center 0px; transform: rotate(-0deg); width: 697px; height: 708px;"></canvas></div></div><div class="esri-display-object" style="display: block;"><svg overflow="hidden" width="697" height="708" style="width: 697px; height: 708px;"><defs></defs><g transform="matrix(0.97517392,0.00000000,0.00000000,0.97517392,8.45485200,-12.26244104)"></g><g transform="matrix(0.97517392,0.00000000,0.00000000,0.97517392,8.45485200,-12.26244104)"></g></svg></div></div></div><div role="presentation" class="esri-invisible esri-popup esri-widget" widgetid="esri_widgets_Popup_0" id="esri_widgets_Popup_0">
+  <!-- Popup Container -->
+  <div data-dojo-attach-point="_containerNode" class="esri-container esri-popup-shadow esri-show-footer esri-feature-updated esri-show-dock esri-dock-to-right esri-top" data-layer-name="" data-layer-id="">
+    <div class="esri-popup-main">
+      <!-- Popup Docked Pagination -->
+      <section class="esri-pagination-docked">
+        <div role="presentation" class="esri-loading-container" title="Loading">
+          <span aria-hidden="true" class="esri-popup-icon esri-rotating esri-icon-loading-indicator"></span>
+          <span class="esri-icon-font-fallback-text">Loading</span>
+        </div>
+        <div class="esri-pagination-docked-buttons">
+          <div role="button" tabindex="0" data-dojo-attach-point="_previousDockedNode" class="esri-button esri-previous" title="Previous feature">
+            <span aria-hidden="true" class="esri-popup-icon esri-previous-icon-ltr esri-icon-left-triangle-arrow"></span>
+            <span aria-hidden="true" class="esri-popup-icon esri-previous-icon-rtl esri-icon-right-triangle-arrow"></span>
+            <span class="esri-icon-font-fallback-text">Previous feature</span>
+          </div>
+          <div data-dojo-attach-point="_pageTextDockedNode" class="esri-page-text"></div>
+          <div role="button" tabindex="0" data-dojo-attach-point="_nextDockedNode" class="esri-button esri-next" title="Next feature">
+            <span aria-hidden="true" class="esri-popup-icon esri-next-icon-ltr esri-icon-right-triangle-arrow"></span>
+            <span aria-hidden="true" class="esri-popup-icon esri-next-icon-rtl esri-icon-left-triangle-arrow"></span>
+            <span class="esri-icon-font-fallback-text">Next feature</span>
+          </div>
+          <div role="button" tabindex="0" data-dojo-attach-point="_pageMenuDockedNode" class="esri-button esri-page-menu-button" title="Menu">
+            <span aria-hidden="true" class="esri-popup-icon esri-page-menu-icon esri-icon-layer-list"></span>
+            <span class="esri-icon-font-fallback-text">Menu</span>
+          </div>
+        </div>
+      </section>
+      <!-- /Popup Docked Pagination -->
+      <!-- Popup Header -->
+      <header class="esri-popup-header">
+        <h1 data-dojo-attach-point="_titleNode" class="esri-title"></h1>
+        <div class="esri-popup-header-buttons">
+          <div role="button" tabindex="0" data-dojo-attach-point="_dockNode" class="esri-button esri-dock" title="Dock">
+            <span aria-hidden="true" class="esri-popup-icon esri-dock-icon esri-icon-dock-right"></span>
+            <span aria-hidden="true" class="esri-popup-icon esri-dock-icon esri-icon-maximize"></span>
+            <span aria-hidden="true" class="esri-popup-icon esri-dock-icon esri-icon-dock-left"></span>
+            <span aria-hidden="true" class="esri-popup-icon esri-dock-icon esri-icon-dock-bottom"></span>
+            <span class="esri-icon-font-fallback-text esri-dock-text">Dock</span>
+            <span aria-hidden="true" class="esri-popup-icon esri-undock-icon esri-icon-minimize"></span>
+            <span class="esri-icon-font-fallback-text esri-undock-text">Undock</span>
+          </div>
+          <div role="button" tabindex="0" data-dojo-attach-point="_closeNode" class="esri-button esri-close" title="Close">
+            <span aria-hidden="true" class="esri-popup-icon esri-close-icon esri-icon-close"></span>
+            <span class="esri-icon-font-fallback-text">Close</span>
+          </div>
+        </div>
+      </header>
+      <!-- /Popup Header -->
+      <!-- Popup Content -->
+      <article class="esri-popup-content" data-dojo-attach-point="_bodyContentNode"></article>
+      <!-- /Popup Content -->
+      <!-- Popup Footer -->
+      <footer class="esri-footer">
+        <!-- Popup Actions -->
+        <div data-dojo-attach-point="_actionsNode" class="esri-actions"><div tabindex="0" title="Zoom to" data-action-index="0" class="esri-button esri-action"><span class="esri-popup-icon esri-icon-zoom-in-magnifying-glass"></span><span class="esri-action-text">Zoom to</span></div></div>
+        <!-- /Popup Actions -->
+        <!-- Popup Pagination -->
+        <section class="esri-pagination">
+          <div role="presentation" class="esri-loading-container" title="Loading">
+            <span aria-hidden="true" class="esri-popup-icon esri-rotating esri-icon-loading-indicator"></span>
+            <span class="esri-icon-font-fallback-text">Loading</span>
+          </div>
+          <div role="button" tabindex="0" data-dojo-attach-point="_previousNode" class="esri-button esri-previous" title="Previous feature">
+            <span aria-hidden="true" class="esri-popup-icon esri-previous-icon-ltr esri-icon-left-triangle-arrow"></span>
+            <span aria-hidden="true" class="esri-popup-icon esri-previous-icon-rtl esri-icon-right-triangle-arrow"></span>
+            <span class="esri-icon-font-fallback-text">Previous feature</span>
+          </div>
+          <div data-dojo-attach-point="_pageTextNode" class="esri-page-text"></div>
+          <div role="button" tabindex="0" data-dojo-attach-point="_nextNode" class="esri-button esri-next" title="Next feature">
+            <span aria-hidden="true" class="esri-popup-icon esri-next-icon-ltr esri-icon-right-triangle-arrow"></span>
+            <span aria-hidden="true" class="esri-popup-icon esri-next-icon-rtl esri-icon-left-triangle-arrow"></span>
+            <span class="esri-icon-font-fallback-text">Next feature</span>
+          </div>
+          <div role="button" tabindex="0" data-dojo-attach-point="_pageMenuNode" class="esri-button esri-page-menu-button" title="Menu">
+            <span aria-hidden="true" class="esri-popup-icon esri-page-menu-icon esri-icon-layer-list"></span>
+            <span class="esri-icon-font-fallback-text">Menu</span>
+          </div>
+        </section>
+        <!-- /Popup Pagination -->
+      </footer>
+      <!-- /Popup Footer -->
+      <!-- Popup Menu -->
+      <section class="esri-page-menu" data-dojo-attach-point="_pageMenuSectionNode" aria-hidden="true">
+        <h2 class="esri-page-menu-header" data-dojo-attach-point="_pageMenuInfoNode"></h2>
+        <nav class="esri-page-menu-viewport">
+          <ol class="esri-page-menu-list" role="menu" data-dojo-attach-point="_paginationNode"></ol>
+        </nav>
+      </section>
+      <!-- /Popup Menu -->
+    </div>
+    <!-- Popup Pointer -->
+    <div data-dojo-attach-point="_pointerNode" class="esri-pointer" role="presentation">
+      <div class="esri-pointer-direction esri-popup-shadow"></div>
+    </div>
+    <!-- /Popup Pointer -->
+  </div>
+  <!-- /Popup Container -->
+</div><div class="esri-ui" style="top: 0px; left: 0px; right: 0px; bottom: 0px;"><div class="esri-ui-inner-container esri-ui-corner-container" style="top: 15px; left: 15px; right: 15px; bottom: 30px;"><div class="esri-ui-top-left esri-ui-corner"><div data-dojo-attach-point="_containerNode" class="esri-zoom esri-widget esri-component" widgetid="esri_widgets_Zoom_0" id="esri_widgets_Zoom_0">
+  <div role="button" data-dojo-attach-point="_zoomInNode" class="esri-button esri-widget-button esri-interactive" title="Zoom In" tabindex="0">
+    <span aria-hidden="true" role="presentation" class="esri-icon esri-icon-plus"></span>
+    <span class="esri-icon-font-fallback-text">Zoom In</span>
+  </div>
+  <div role="button" data-dojo-attach-point="_zoomOutNode" class="esri-button esri-widget-button esri-interactive" title="Zoom Out" tabindex="0">
+    <span aria-hidden="true" role="presentation" class="esri-icon esri-icon-minus"></span>
+    <span class="esri-icon-font-fallback-text">Zoom Out</span>
+  </div>
+</div></div><div class="esri-ui-top-right esri-ui-corner"></div><div class="esri-ui-bottom-left esri-ui-corner"></div><div class="esri-ui-bottom-right esri-ui-corner"></div></div><div class="esri-ui-inner-container esri-ui-manual-container"><div class="esri-attribution esri-widget esri-component" widgetid="esri_widgets_Attribution_0" id="esri_widgets_Attribution_0">
+  <div class="esri-attribution__sources" data-dojo-attach-point="_sourcesNode" tabindex="" role=""></div>
+  <div class="esri-attribution__powered-by">Powered by <a target="_blank" href="http://www.esri.com/" class="esri-attribution__link">Esri</a></div>
+</div></div></div><div class="esri-message esri-widget" widgetid="esri_widgets_Message_0" id="esri_widgets_Message_0"><span class="esri-message__text">No features found</span></div><div class="esri-spinner esri-widget" widgetid="esri_widgets_Spinner_0" id="esri_widgets_Spinner_0"></div></div></div>
+
+
+</body></html>
