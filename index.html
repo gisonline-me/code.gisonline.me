@@ -77,6 +77,23 @@
       </div>
     </div>
   </div>
+  <!-- Modal -->
+  <div class="modal fade" id="submit_model" tabindex="-1" role="dialog" aria-labelledby="submit_modelLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="submit_modelLabel"></h4>
+          <div id="submit_image_block"></div>
+        </div>
+        <div class="modal-body" id="submit_modelBody">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn" style="background: #ddd;border:0;" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
     <nav class="navbar navbar-default">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -107,6 +124,7 @@
                 </li>
                 <li id="btnRun"><a href=""><span class="glyphicon glyphicon-play" aria-hidden="true"></span> Run</a></li>
                 <li id="btnTidyUp"><a href=""><span class="glyphicon glyphicon-indent-left" aria-hidden="true"></span> TidyUp</a></li>
+                <li id="btnDownload"><a href="#"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Download</a></li>
 
             </ul>
             <div id="anonymousPanel">
@@ -119,7 +137,12 @@
 
             <div id="loggedInPanel">
               <ul class="nav navbar-nav">
-                <li id="btnDownload"><a href="#"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Download</a></li>
+                <li style="margin-top:10px">
+                  <label style="color:white;">My Samples </label>
+                  <select class="selectpicker" id="agol_folder_code_samples">
+                  </select>
+
+                </li>
                 <li id="btnUpload"><a href="#"><span class="glyphicon glyphicon-upload" aria-hidden="true"></span>Upload</a></li>
                 <li id="btnSignOut"><a href="#"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> SignOut</a></li>
                 <li><a style="padding-left: 0px;" href="#"><img class="esri_image" src="images/esri.png" height="30px" /></a></li>

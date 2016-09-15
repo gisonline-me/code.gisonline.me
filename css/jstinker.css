@@ -374,3 +374,15 @@ input, textarea {
 .label-info{
   background: #45b788;
 }
+.submit_img{
+  width:100px;
+  text-align: center;
+}
+
+#submit_image_block{
+  text-align: center;
+}
+
+#open_agol_link{
+  font-size: 24px;
+}
