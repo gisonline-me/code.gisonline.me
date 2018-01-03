@@ -37,7 +37,7 @@ require([
           var initCode = ace.edit("html-editor").getSession();
           event.preventDefault();
           initCode.setValue(result);
-          $("#btnRun").click();
+          run_code();
       }
     });
 
@@ -48,7 +48,7 @@ require([
             var initCode = ace.edit("html-editor").getSession();
             event.preventDefault();
             initCode.setValue(result);
-            $("#btnRun").click();
+            run_code();
         }
       });
     });
@@ -299,7 +299,6 @@ require([
   }
 
   function set_click_listners(){
-
 
     $("#btnRun").click(function(event) {
         run_code();
